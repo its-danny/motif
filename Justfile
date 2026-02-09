@@ -1,0 +1,2 @@
+inherit-deps:
+  cargo autoinherit

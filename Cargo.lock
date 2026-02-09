@@ -12,6 +12,9 @@ dependencies = [
 [[package]]
 name = "motif-engine"
 version = "0.0.0"
+dependencies = [
+ "wmidi",
+]
 
 [[package]]
 name = "wmidi"

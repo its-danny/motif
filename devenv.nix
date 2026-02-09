@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   dotenv.enable = true;
 
-  packages = [pkgs.cocogitto pkgs.git];
+  packages = [pkgs.cocogitto pkgs.git pkgs.just];
 
   languages = {
     rust = {

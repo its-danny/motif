@@ -5,4 +5,4 @@ edition.workspace = true
 license.workspace = true
 
 [dependencies]
-wmidi = "4.0.10"
+wmidi = { workspace = true }
