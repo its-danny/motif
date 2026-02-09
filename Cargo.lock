@@ -5,3 +5,12 @@ version = 4
 [[package]]
 name = "motif-core"
 version = "0.0.0"
+dependencies = [
+ "wmidi",
+]
+
+[[package]]
+name = "wmidi"
+version = "4.0.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4e55f35b40ad0178422d06e9ba845041baf2faf04627b91fde928d0f6a21c712"
