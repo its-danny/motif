@@ -25,6 +25,10 @@ impl Tick {
         self.0 as f64 / TICKS_PER_QUARTER as f64
     }
 
+    pub fn snap_to_grid(self, grid: u64) -> Tick {
+        Tick(((self.0 + grid / 2) / grid) * grid)
+    }
+
     pub fn saturating_sub(self, other: Tick) -> Tick {
         Tick(self.0.saturating_sub(other.0))
     }
@@ -100,6 +104,16 @@ mod tests {
         assert_eq!(Tick::ZERO.to_quarters(), 0.0);
         assert_eq!(Tick(240).to_quarters(), 0.5);
         assert_eq!(Tick::from_quarters(1).to_quarters(), 1.0);
+    }
+
+    #[test]
+    fn snap_to_grid() {
+        assert_eq!(Tick(0).snap_to_grid(120), Tick(0));
+        assert_eq!(Tick(50).snap_to_grid(120), Tick(0));
+        assert_eq!(Tick(60).snap_to_grid(120), Tick(120));
+        assert_eq!(Tick(80).snap_to_grid(120), Tick(120));
+        assert_eq!(Tick(130).snap_to_grid(120), Tick(120));
+        assert_eq!(Tick(500).snap_to_grid(160), Tick(480));
     }
 
     #[test]
