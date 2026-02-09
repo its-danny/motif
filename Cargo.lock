@@ -10,6 +10,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "motif-engine"
+version = "0.0.0"
+
+[[package]]
 name = "wmidi"
 version = "4.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"

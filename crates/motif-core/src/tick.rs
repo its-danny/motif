@@ -1,5 +1,9 @@
+/// 480 PPQ. Divides cleanly by 2, 3, 4, 5, 8, 16, 32, etc.
+/// Covers all standard musical subdivisions including triplets.
 pub const TICKS_PER_QUARTER: u64 = 480;
 
+/// Absolute position in musical time. Integer-only to avoid float drift.
+/// Durations use raw `u64` instead. Tick is specifically a position.
 #[derive(Debug, PartialEq, PartialOrd)]
 pub struct Tick(u64);
 
@@ -10,6 +14,8 @@ impl Tick {
         Tick(quarters * TICKS_PER_QUARTER)
     }
 
+    /// Construct from a beat fraction (e.g. 1/16 = sixteenth note).
+    /// Panics in debug if the division isn't exact.
     pub fn from_beats(numerator: u64, denominator: u64) -> Self {
         let total = numerator * TICKS_PER_QUARTER * 4;
 
@@ -25,6 +31,7 @@ impl Tick {
         self.0 as f64 / TICKS_PER_QUARTER as f64
     }
 
+    /// Round to the nearest grid line. Ties round up.
     pub fn snap_to_grid(self, grid: u64) -> Tick {
         Tick(((self.0 + grid / 2) / grid) * grid)
     }

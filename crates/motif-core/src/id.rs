@@ -1,3 +1,4 @@
+/// Global, monotonic ID allocation. IDs are never reused within a project.
 #[derive(Debug, Default)]
 pub struct IdAllocator {
     next_note: u64,
@@ -13,6 +14,7 @@ impl IdAllocator {
     }
 }
 
+/// Stable note identifier. Never reused, so undo references remain valid across edits.
 #[derive(Debug, PartialEq)]
 pub struct NoteId(pub u64);
 
