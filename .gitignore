@@ -11,3 +11,6 @@ devenv.local.yaml
 
 # claude
 .claude/
+
+# rust
+target/
