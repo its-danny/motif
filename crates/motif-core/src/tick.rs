@@ -4,11 +4,15 @@ pub const TICKS_PER_QUARTER: u64 = 480;
 
 /// Absolute position in musical time. Integer-only to avoid float drift.
 /// Durations use raw `u64` instead. Tick is specifically a position.
-#[derive(Debug, PartialEq, PartialOrd)]
+#[derive(Debug, Clone, Copy, PartialEq, PartialOrd)]
 pub struct Tick(u64);
 
 impl Tick {
     pub const ZERO: Tick = Tick(0);
+
+    pub fn from_raw(ticks: u64) -> Self {
+        Self(ticks)
+    }
 
     pub fn from_quarters(quarters: u64) -> Self {
         Tick(quarters * TICKS_PER_QUARTER)

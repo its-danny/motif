@@ -12,6 +12,7 @@ edition = "2024"
 license = "Apache-2.0 OR MIT"
 
 [workspace.dependencies]
+motif-core = { path = "crates/motif-core" }
 motif-engine = { path = "crates/motif-engine" }
 motif-pulse = { path = "crates/motif-instruments/motif-pulse" }
 wmidi = "4.0.10"
