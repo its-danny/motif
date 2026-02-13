@@ -1,9 +1,9 @@
 [package]
-name = "motif-engine"
+name = "motif"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 
 [dependencies]
-motif-core.workspace = true
-wmidi.workspace = true
+motif-ui.workspace = true
+iced.workspace = true
