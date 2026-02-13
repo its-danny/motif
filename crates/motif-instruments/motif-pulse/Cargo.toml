@@ -1,0 +1,12 @@
+[package]
+name = "motif-pulse"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+wmidi.workspace = true
+motif-engine.workspace = true
+
+[dev-dependencies]
+cpal.workspace = true
