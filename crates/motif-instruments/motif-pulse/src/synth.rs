@@ -261,6 +261,7 @@ impl AudioNode for Pulse {
                                 .enumerate()
                                 .min_by_key(|(_, v)| v.age)
                                 .map(|(i, _)| i)
+                                // UNWRAP SAFETY: The voices array is never empty.
                                 .unwrap()
                         });
 

@@ -74,16 +74,20 @@ fn main() {
                 let frames = data.len() / channels;
                 buffer.prepare(frames);
 
-                // Collect events that fall within this buffer.
                 let mut events = Vec::new();
+
+                // Collect events that fall within this buffer.
                 while schedule_cursor < schedule.len() {
                     let (trigger_at, ref event) = schedule[schedule_cursor];
+
                     if trigger_at < samples_elapsed + frames as u64 {
                         let offset = trigger_at.saturating_sub(samples_elapsed) as u32;
+
                         events.push(ScheduledEvent {
                             sample_offset: offset,
                             event: event.clone(),
                         });
+
                         schedule_cursor += 1;
                     } else {
                         break;
