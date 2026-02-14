@@ -1,21 +1,21 @@
 use iced::Color;
 
-// Zinc palette (tailwind/shadcn inspired)
-pub const ZINC_950: Color = Color::from_rgb(0.035, 0.035, 0.043); // #09090b
-pub const ZINC_900: Color = Color::from_rgb(0.094, 0.094, 0.106); // #18181b
-pub const ZINC_800: Color = Color::from_rgb(0.153, 0.153, 0.165); // #27272a
-pub const ZINC_700: Color = Color::from_rgb(0.247, 0.247, 0.271); // #3f3f46
-pub const ZINC_500: Color = Color::from_rgb(0.443, 0.443, 0.478); // #71717a
-pub const ZINC_400: Color = Color::from_rgb(0.631, 0.631, 0.667); // #a1a1aa
-pub const ZINC_200: Color = Color::from_rgb(0.894, 0.894, 0.906); // #e4e4e7
-pub const ZINC_50: Color = Color::from_rgb(0.980, 0.980, 0.984); // #fafafa
+// Blue-steel DAW palette (dark, slightly desaturated)
+pub const ZINC_950: Color = Color::from_rgb(0.094, 0.098, 0.145); // #181925
+pub const ZINC_900: Color = Color::from_rgb(0.117, 0.125, 0.188); // #1e2030
+pub const ZINC_800: Color = Color::from_rgb(0.196, 0.207, 0.286); // #32354a
+pub const ZINC_700: Color = Color::from_rgb(0.266, 0.282, 0.380); // #444860
+pub const ZINC_500: Color = Color::from_rgb(0.458, 0.482, 0.596); // #757b98
+pub const ZINC_400: Color = Color::from_rgb(0.651, 0.675, 0.776); // #a6acc6
+pub const ZINC_200: Color = Color::from_rgb(0.828, 0.847, 0.914); // #d3d8e9
+pub const ZINC_50: Color = Color::from_rgb(0.925, 0.933, 0.965); // #ecedf6
 
 // Mode accent colors
-pub const BLUE_500: Color = Color::from_rgb(0.231, 0.510, 0.965); // #3b82f6
-pub const GREEN_500: Color = Color::from_rgb(0.133, 0.804, 0.475); // #22c55e
-pub const AMBER_500: Color = Color::from_rgb(0.961, 0.620, 0.043); // #f59e0b
-pub const PURPLE_500: Color = Color::from_rgb(0.541, 0.361, 0.949); // #8b5cf6
-pub const ROSE_500: Color = Color::from_rgb(0.957, 0.259, 0.388); // #f43f62
+pub const BLUE_500: Color = Color::from_rgb(0.400, 0.620, 0.980); // #669ef9
+pub const GREEN_500: Color = Color::from_rgb(0.367, 0.812, 0.620); // #5dcf9e
+pub const AMBER_500: Color = Color::from_rgb(0.929, 0.722, 0.319); // #edb851
+pub const PURPLE_500: Color = Color::from_rgb(0.612, 0.557, 0.871); // #9c8eda
+pub const ROSE_500: Color = Color::from_rgb(0.914, 0.463, 0.576); // #e97693
 
 use crate::app::Mode;
 
