@@ -6,4 +6,9 @@ license.workspace = true
 
 [dependencies]
 motif-ui.workspace = true
+motif-core.workspace = true
+motif-engine.workspace = true
+motif-pulse.workspace = true
 iced.workspace = true
+rtrb.workspace = true
+cpal.workspace = true

@@ -7,3 +7,5 @@ license.workspace = true
 [dependencies]
 iced.workspace = true
 motif-core.workspace = true
+motif-engine.workspace = true
+wmidi.workspace = true

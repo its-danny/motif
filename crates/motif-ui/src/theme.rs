@@ -23,12 +23,14 @@ impl Mode {
     pub fn label(&self) -> &'static str {
         match self {
             Mode::Normal => "NORMAL",
+            Mode::Play => "PLAY",
         }
     }
 
     pub fn color(&self) -> Color {
         match self {
             Mode::Normal => BLUE_500,
+            Mode::Play => GREEN_500,
         }
     }
 }

@@ -1714,8 +1714,13 @@ dependencies = [
 name = "motif"
 version = "0.0.0"
 dependencies = [
+ "cpal",
  "iced",
+ "motif-core",
+ "motif-engine",
+ "motif-pulse",
  "motif-ui",
+ "rtrb",
 ]
 
 [[package]]
@@ -1730,6 +1735,8 @@ name = "motif-engine"
 version = "0.0.0"
 dependencies = [
  "motif-core",
+ "rtrb",
+ "thiserror 2.0.18",
  "wmidi",
 ]
 
@@ -1748,6 +1755,8 @@ version = "0.0.0"
 dependencies = [
  "iced",
  "motif-core",
+ "motif-engine",
+ "wmidi",
 ]
 
 [[package]]
@@ -2587,6 +2596,12 @@ name = "roxmltree"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6c20b6793b5c2fa6553b250154b78d6d0db37e72700ae35fad9387a46f487c97"
+
+[[package]]
+name = "rtrb"
+version = "0.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ad8388ea1a9e0ea807e442e8263a699e7edcb320ecbcd21b4fa8ff859acce3ba"
 
 [[package]]
 name = "rustc-hash"

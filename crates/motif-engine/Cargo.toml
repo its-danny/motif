@@ -6,4 +6,6 @@ license.workspace = true
 
 [dependencies]
 motif-core.workspace = true
+rtrb.workspace = true
+thiserror.workspace = true
 wmidi.workspace = true
